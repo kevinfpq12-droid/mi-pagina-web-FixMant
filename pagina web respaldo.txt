@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FixMant Service | Servicio técnico</title>
+  <meta name="description" content="Servicios técnicos: mantenimiento preventivo y correctivo. Cotiza por WhatsApp." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio">FixMant Service</a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#areas">Áreas</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <!-- Cambia 593000000000 por tu número real (sin +, sin espacios) -->
+      <a class="btn btn--primary"
+         href="https://wa.me/593000000000?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n."
+         target="_blank" rel="noopener">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div>
+          <h1>Servicio técnico y mantenimiento</h1>
+          <p class="lead">
+            Atención a domicilio y para instituciones. Mantenimiento preventivo y correctivo con diagnóstico y recomendaciones.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contacto">Solicitar cotización</a>
+            <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
+          </div>
+
+          <div class="badges">
+            <span class="badge">Respuesta rápida</span>
+            <span class="badge">Trabajo con reporte</span>
+            <span class="badge">Cobertura local</span>
+                <div class="hero__card" aria-label="Tarjeta de resumen">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 08:00 – 18:00</p>
+                <h3>Zona</h3>
+                <p>Cayambe / Quito / Alrededores</p>
+                <h3>Contacto</h3>
+                <p><strong>+593 98 707 6140</strong></p>
+                </div>
+          </div>
+        </div>
+         
+
+        <!-- Lado derecho: Foto + tarjeta -->
+        <div class="heroRight">
+          <!-- FOTO TUYA: pon tu foto en /img/kevin-mantenimiento.jpg -->
+          <div class="heroPhoto" aria-label="Foto realizando mantenimiento">
+            <img src="img/kevin-mantenimiento.jpg" alt="Técnico realizando mantenimiento" loading="lazy">
+          </div>
+
+         
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="section">
+      <div class="container">
+        <h2>Servicios</h2>
+        <p class="section__subtitle">
+          Mantenimiento preventivo y correctivo. Diagnóstico, limpieza, pruebas y recomendaciones según el equipo.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Mantenimiento preventivo</h3>
+            <p>Inspección, limpieza, verificación funcional y recomendaciones para evitar fallas.</p>
+          </article>
+
+          <article class="card">
+            <h3>Mantenimiento correctivo</h3>
+            <p>Diagnóstico y reparación de fallas con pruebas finales de funcionamiento.</p>
+          </article>
+
+          <article class="card">
+            <h3>Instalación y configuración</h3>
+            <p>Puesta en marcha, configuración y validación básica del equipo/sistema.</p>
+          </article>
+
+          <article class="card">
+            <h3>Soporte técnico</h3>
+            <p>Asistencia para resolver problemas, optimizar funcionamiento y dar recomendaciones.</p>
+          </article>
+        </div>
+
+        <!-- Áreas -->
+        <div id="areas" class="serviceDivider">
+          <h3>Áreas de atención</h3>
+          <p>Organizamos nuestros servicios según el tipo de equipos que atendemos.</p>
+        </div>
+
+        <div class="areasGrid">
+          <!-- Biomédica -->
+          <section class="areaCard" aria-label="Área Biomédica">
+            <div class="areaCard__head">
+              <span class="areaIcon">🏥</span>
+              <div>
+                <h4>Área Biomédica</h4>
+                <p>Equipos clínicos y hospitalarios (mantenimiento y soporte).</p>
+              </div>
+            </div>
+
+            <ul class="areaList">
+              <li>Camas eléctricas</li>
+              <li>Monitores (verificación funcional)</li>
+              <li>Balanzas (pruebas de lectura/estabilidad)</li>
+              <li>Otros equipos bajo revisión</li>
+            </ul>
+
+            <a class="btn btn--ghost" href="#contacto">Cotizar biomédico</a>
+          </section>
+
+          <!-- General -->
+          <section class="areaCard" aria-label="Área General e Industrial">
+            <div class="areaCard__head">
+              <span class="areaIcon">🧰</span>
+              <div>
+                <h4>Área General / Industrial</h4>
+                <p>Soporte técnico para hogar e industria (según disponibilidad).</p>
+              </div>
+            </div>
+
+            <ul class="areaList">
+              <li>UPS (inspección, pruebas y recomendaciones)</li>
+              <li>Lavadoras (diagnóstico y mantenimiento)</li>
+              <li>Durómetros (inspección y verificación)</li>
+              <li>Otros equipos (según caso)</li>
+            </ul>
+
+            <a class="btn btn--ghost" href="#contacto">Cotizar general</a>
+          </section>
+        </div>
+
+        <div class="servicesCta">
+          <div>
+            <h3>¿Necesitas cotizar rápido?</h3>
+            <p>Envíame <strong>foto del equipo</strong>, <strong>ciudad</strong> y <strong>síntoma</strong> por WhatsApp.</p>
+          </div>
+
+          <div class="servicesCta__actions">
+            <a class="btn btn--primary"
+               href="https://wa.me/593000000000?text=Hola%2C%20quiero%20cotizar%20un%20mantenimiento.%20Area%3A%20(Biomedica%2FGeneral)%20Equipo%3A%20____%20Ciudad%3A%20____%20Falla%3A%20____"
+               target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section id="proceso" class="section section--alt">
+      <div class="container">
+        <h2>Cómo trabajamos</h2>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">1</span>
+            <div>
+              <h3>Diagnóstico</h3>
+              <p>Levantamos información y revisamos el equipo/sistema.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <span class="step__num">2</span>
+            <div>
+              <h3>Cotización</h3>
+              <p>Enviamos costos y tiempos estimados para aprobación.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <span class="step__num">3</span>
+            <div>
+              <h3>Ejecución</h3>
+              <p>Realizamos el servicio y validamos funcionamiento.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <span class="step__num">4</span>
+            <div>
+              <h3>Entrega</h3>
+              <p>Entregamos recomendaciones e informe (si aplica).</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p class="section__subtitle">Escríbenos y cuéntanos qué necesitas.</p>
+
+        <div class="contact">
+          <div class="contact__info">
+            <div class="infoBox">
+              <h3>WhatsApp</h3>
+              <p>Respuesta rápida</p>
+              <a class="btn btn--primary"
+                 href="https://wa.me/593000000000?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n."
+                 target="_blank" rel="noopener">
+                Escribir por WhatsApp
+              </a>
+            </div>
+
+            <div class="infoBox">
+              <h3>Correo</h3>
+              <p>tucorreo@ejemplo.com</p>
+            </div>
+
+            <div class="infoBox">
+              <h3>Ubicación</h3>
+              <p>Cayambe, Ecuador</p>
+            </div>
+          </div>
+
+          <!-- Formulario (funciona en Netlify cuando publiques) -->
+          <form class="form" name="contacto" method="post" data-netlify="true">
+            <input type="hidden" name="form-name" value="contacto" />
+
+            <label>
+              Nombre
+              <input name="nombre" required />
+            </label>
+
+            <label>
+              Teléfono
+              <input name="telefono" inputmode="tel" />
+            </label>
+
+            <label>
+              Mensaje
+              <textarea name="mensaje" rows="5" required></textarea>
+            </label>
+
+            <button class="btn btn--primary" type="submit">Enviar</button>
+            <p class="hint">Este formulario funciona en Netlify cuando lo publiques.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> FixMant Service. Todos los derechos reservados.</p>
+      <a href="#inicio">Volver arriba</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

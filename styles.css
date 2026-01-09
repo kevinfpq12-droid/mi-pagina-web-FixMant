@@ -1,0 +1,409 @@
+:root{
+  /* Fondo general */
+  --bg: #ffffffe4;          /* Fondo blanco */
+  --panel:#f8f9fa;       /* Paneles ligeramente grises si quieres contraste */
+  --panel2:#f1f5f9;      /* Panel secundario más claro */
+  --text:#000000;        /* Texto oscuro para buena lectura */
+  --muted:#000000;       /* Texto secundario */
+  --border:rgba(0,0,0,.12);  /* Borde sutil en gris */
+  
+  /* Botones y colores de acción */
+  --primary:#3be0f6;     /* Celeste principal */
+  --primary2:#3bf0f6;    /* Celeste oscuro para hover o activo */
+  
+  --shadow:0 10px 30px rgba(0,0,0,.1); /* Sombra más ligera sobre fondo blanco */
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(34,197,94,.18), transparent 60%),
+              radial-gradient(900px 500px at 100% 0%, rgba(99,102,241,.16), transparent 60%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 18px}
+
+.header{
+  position:sticky; top:0; z-index:10;
+  background: rgba(200, 210, 237, 0.72);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.header__inner{
+  display:flex; align-items:center; gap:16px;
+  padding:14px 0;
+}
+.brand{
+  font-weight:800; letter-spacing:.2px;
+  padding:8px 10px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background: rgba(255,255,255,.04);
+}
+.nav{
+  margin-left:auto;
+  display:flex; gap:14px;
+}
+.nav a{
+  padding:8px 10px;
+  border-radius:10px;
+  color:var(--muted);
+}
+.nav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  font-weight:600;
+  gap:8px;
+  cursor:pointer;
+}
+.btn--primary{
+  background: linear-gradient(180deg, var(--primary), var(--primary2));
+  border-color: rgba(34,197,94,.35);
+  color:#04110a;
+}
+.btn--ghost:hover{background:rgba(255,255,255,.06)}
+.btn--primary:hover{filter:brightness(1.03)}
+
+.hero{padding:56px 0 28px}
+.hero__inner{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:22px;
+  align-items:start;
+}
+h1{font-size:42px; line-height:1.1; margin:0 0 12px}
+.lead{color:var(--muted); font-size:18px; margin:0 0 18px}
+.hero__actions{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px}
+.badges{display:flex; gap:8px; flex-wrap:wrap}
+.badge{
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:2px solid var(--border);
+  background: rgba(255,255,255,.04);
+  color:var(--muted);
+}
+
+/* Foto + tarjeta del lado derecho */
+.heroRight{
+  display:grid;
+  gap:14px;
+}
+.heroPhoto{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow: var(--shadow);
+  height: 450px;
+  width: 600px;
+}
+.heroPhoto img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+
+.hero__card{
+  border:1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  border-radius:18px;
+  padding:18px;
+  box-shadow: var(--shadow);
+}
+.hero__card h3{margin:0 0 6px; font-size:14px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.08em}
+.hero__card p{margin:0 0 14px}
+
+.section{padding:40px 0}
+.section--alt{background:rgba(255,255,255,.03); border-top:1px solid var(--border); border-bottom:1px solid var(--border)}
+h2{margin:0 0 8px; font-size:28px}
+.section__subtitle{margin:0 0 18px; color:var(--muted)}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:14px;
+}
+.card{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  border-radius:16px;
+  padding:16px;
+}
+.card h3{margin:0 0 8px}
+.card p{margin:0; color:var(--muted)}
+
+.serviceDivider{
+  margin-top: 18px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  border-radius:18px;
+  padding:14px 16px;
+}
+.serviceDivider h3{margin:0 0 6px;}
+.serviceDivider p{margin:0; color:var(--muted);}
+
+.areasGrid{
+  margin-top: 14px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:14px;
+}
+.areaCard{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  border-radius:18px;
+  padding:16px;
+}
+.areaCard__head{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  margin-bottom: 10px;
+}
+.areaIcon{
+  width:38px;
+  height:38px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  flex: 0 0 auto;
+}
+.areaCard h4{
+  margin:0 0 4px;
+  font-size:18px;
+}
+.areaCard p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+.areaList{
+  margin: 10px 0 14px;
+  padding-left: 18px;
+  color: var(--muted);
+}
+.areaList li{ margin: 6px 0; }
+
+.servicesCta{
+  margin-top:18px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  border-radius:18px;
+  padding:16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.servicesCta h3{margin:0 0 6px;}
+.servicesCta p{margin:0; color:var(--muted);}
+.servicesCta__actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.steps{list-style:none; padding:0; margin:18px 0 0; display:grid; gap:12px}
+.step{
+  display:flex; gap:12px;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:14px;
+  background: rgba(255,255,255,.04);
+}
+.step__num{
+  width:34px; height:34px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  background: rgba(34,197,94,.15);
+  border:1px solid rgba(34,197,94,.25);
+  font-weight:800;
+}
+.step h3{margin:0 0 4px}
+.step p{margin:0; color:var(--muted)}
+
+.contact{
+  display:grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap:14px;
+  align-items:start;
+}
+.contact__info{display:grid; gap:12px}
+.infoBox{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  border-radius:16px;
+  padding:16px;
+}
+.infoBox h3{margin:0 0 6px}
+.infoBox p{margin:0 0 10px; color:var(--muted)}
+
+.form{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  border-radius:16px;
+  padding:16px;
+}
+label{display:grid; gap:6px; margin-bottom:12px; color:var(--muted); font-weight:600}
+input, textarea{
+  width:100%;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background: rgba(15,23,42,.75);
+  color:var(--text);
+  outline:none;
+}
+input:focus, textarea:focus{border-color: rgba(34,197,94,.45)}
+.hint{margin:10px 0 0; color:var(--muted); font-size:12px}
+
+.footer{padding:26px 0; border-top:1px solid var(--border)}
+.footer__inner{display:flex; align-items:center; justify-content:space-between; gap:10px; color:var(--muted)}
+
+@media (max-width: 900px){
+  .hero__inner{grid-template-columns: 1fr}
+  .grid{grid-template-columns: repeat(2, 1fr)}
+  .contact{grid-template-columns: 1fr}
+  h1{font-size:36px}
+}
+
+@media (max-width: 520px){
+  .grid{grid-template-columns: 1fr}
+}
+
+
+
+/* =========================
+   TRABAJOS REALIZADOS
+   ========================= */
+
+/* Contenedor general: video + fotos */
+.mediaGrid{
+  margin-top:18px;               /* ⬅️ Espacio superior respecto al título */
+  display:grid;                  /* Usa CSS Grid */
+  grid-template-columns: 0.3fr 1fr;
+  /* ⬅️ Proporción de columnas:
+     - 0.8fr = ancho del VIDEO
+     - 1.2fr = ancho de las FOTOS
+     Cambia estos valores si quieres más o menos espacio */
+  gap:10px;                      /* ⬅️ Espacio entre video y fotos */
+  align-items:stretch;           /* ⬅️ Ambos bloques ocupan la misma altura */
+}
+
+/* =========================
+   VIDEO VERTICAL
+   ========================= */
+.mediaVideo{
+  border:1px solid var(--border); /* ⬅️ Borde */
+  border-radius:20px;             /* ⬅️ Bordes redondeados */
+  overflow:hidden;                /* ⬅️ Oculta sobrantes del video */
+  background: rgba(255,255,255,.04); /* ⬅️ Fondo oscuro translúcido */
+  box-shadow: var(--shadow);      /* ⬅️ Sombra */
+  display:flex;                   /* ⬅️ Centra el video */
+  align-items:center;             /* ⬅️ Centrado vertical */
+  justify-content:center;         /* ⬅️ Centrado horizontal */
+  min-height:420px;               /* ⬅️ ALTURA DEL VIDEO (AUMENTA / DISMINUYE) */
+}
+
+/* Video en sí */
+.mediaVideo video{
+  width:100%;                     /* ⬅️ Ocupa todo el ancho del contenedor */
+  height:100%;                    /* ⬅️ Ocupa toda la altura del contenedor */
+  object-fit:cover;               /* ⬅️ Rellena sin deformar (recorta si es necesario) */
+  aspect-ratio: 9 / 16;           /* ⬅️ FORMATO DEL VIDEO (vertical) */
+  /* Cambios comunes:
+     9 / 16 → muy vertical (Reels)
+     4 / 5  → Instagram
+     1 / 1  → cuadrado
+     16 / 9 → horizontal */
+}
+
+/* =========================
+   GALERÍA DE FOTOS
+   ========================= */
+.mediaPhotos{
+  display:grid;                   /* ⬅️ Grid para las fotos */
+  grid-template-columns: repeat(3, 1fr);
+  /* ⬅️ Número de fotos por fila (3 columnas) */
+  gap:10px;                       /* ⬅️ Espacio entre las fotos */
+}
+
+/* Contenedor de cada foto */
+.mediaPhoto{
+  border:1px solid var(--border); /* ⬅️ Borde */
+  border-radius:16px;             /* ⬅️ Bordes redondeados */
+  overflow:hidden;                /* ⬅️ Oculta exceso de imagen */
+  background: rgba(255,255,255,.04); /* ⬅️ Fondo */
+  box-shadow: var(--shadow);      /* ⬅️ Sombra */
+  height:100%;                    /* ⬅️ Altura automática */
+  /* Puedes forzar altura así:
+     height:220px; → foto pequeña
+     height:260px; → foto mediana
+     height:320px; → foto grande */
+}
+
+/* Imagen dentro del contenedor */
+.mediaPhoto img{
+  width:100%;                     /* ⬅️ Ocupa todo el ancho */
+  height:100%;                    /* ⬅️ Ocupa toda la altura */
+  object-fit:cover;               /* ⬅️ No se deforma, recorta si hace falta */
+  display:block;                  /* ⬅️ Elimina espacios raros */
+  /* Si quieres controlar formato:
+     aspect-ratio: 1 / 1; → cuadrada
+     aspect-ratio: 4 / 3; → técnica
+     aspect-ratio: 16 / 9; → panorámica */
+}
+
+/* =========================
+   RESPONSIVE (TABLET)
+   ========================= */
+@media (max-width: 900px){
+  .mediaGrid{
+    grid-template-columns: 1fr;   /* ⬅️ Video arriba, fotos abajo */
+  }
+
+  .mediaPhotos{
+    grid-template-columns: 1fr 1fr;
+    /* ⬅️ 2 fotos por fila en tablet */
+  }
+}
+
+/* =========================
+   RESPONSIVE (CELULAR)
+   ========================= */
+@media (max-width: 520px){
+  .mediaPhotos{
+    grid-template-columns: 1fr;   /* ⬅️ 1 foto por fila en celular */
+  }
+}
+
+.brand {
+  display: flex;         /* Permite alinear logo y texto horizontalmente */
+  align-items: center;   /* Centra verticalmente el logo con el texto */
+  gap: 10px;             /* Espacio entre logo y texto */
+  text-decoration: none; /* Quita subrayado */
+  color: var(--text);    /* Mantiene el color de tu texto */
+  font-weight: bold;     /* Si quieres que el texto sea más visible */
+   font-size: 28px;   /* ⬅️ Tamaño de letra aumentado */
+}
+
+.brand img.logo {
+  height: 60px;  /* Ajusta el tamaño del logo */
+  width: auto;   /* Mantiene proporción */
+}
+
