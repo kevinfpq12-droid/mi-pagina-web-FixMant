@@ -407,3 +407,44 @@ input:focus, textarea:focus{border-color: rgba(34,197,94,.45)}
   width: auto;   /* Mantiene proporción */
 }
 
+/* ================= RESPONSIVE PARA MÓVIL ================= */
+
+@media (max-width: 900px) {
+  /* Para el hero en tablets */
+  .hero__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .heroPhoto {
+    width: 100% !important;    /* Ocupa el 100% del ancho disponible */
+    max-width: 400px !important;  /* Pero máximo 400px */
+    height: auto !important;   /* Altura automática */
+    margin: 0 auto;            /* Centrar la imagen */
+  }
+  
+  .heroPhoto img {
+    height: 300px !important;  /* Altura fija más pequeña */
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 520px) {
+  /* Para celulares pequeños */
+  .heroPhoto {
+    max-width: 280px !important;  /* Más pequeño en celular */
+  }
+  
+  .heroPhoto img {
+    height: 250px !important;     /* Más corto en celular */
+  }
+  
+  h1 {
+    font-size: 32px !important;   /* Títulos más pequeños */
+  }
+  
+  .lead {
+    font-size: 16px !important;   /* Texto más pequeño */
+  }
+}
